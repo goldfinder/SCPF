@@ -5,7 +5,6 @@ function purgeSCPTags()
 		plrlist[i]:SetAttribute("GFS_Access",nil)
 		plrlist[i]:SetAttribute("GFS_Role",nil)
 		plrlist[i]:SetAttribute("GFS_Class",nil)
-		print(plrlist[i]:GetAttribute("GFS_Access"),plrlist[i]:GetAttribute("GFS_Role"),plrlist[i]:GetAttribute("GFS_Class"))
 	end
 end
 function gettags(plr)
