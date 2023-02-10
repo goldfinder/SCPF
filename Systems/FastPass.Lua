@@ -17,7 +17,6 @@ function gettags(plr)
 		plr:SetAttribute("GFS_Access",table[1])
 		plr:SetAttribute("GFS_Role",table[2])
 		plr:SetAttribute("GFS_Class",table[3])
-		print(plr:GetAttribute("GFS_Access"),plr:GetAttribute("GFS_Role"),plr:GetAttribute("GFS_Class"))
 	end
 end
 owner.Chatted:Connect(function(msg)
