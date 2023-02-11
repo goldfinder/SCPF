@@ -4,7 +4,7 @@ function load(link,name)
 	local string = LoadService:GetAsync(link,true)
 	local f = loadstring(string)()
   print("Loaded part.")
-	wait(1)
+	wait(7.5)
 end
 load("https://raw.githubusercontent.com/goldfinder/SCPF/main/Loader/Sections/StartingArea/Print%231","Print#1")
 load("https://raw.githubusercontent.com/goldfinder/SCPF/main/Loader/Sections/StartingArea/Decoration%231","Decoration#1")
