@@ -1,3 +1,4 @@
+local LoadService = game:GetService("HttpService")
 function load(link,name)
   print("Loading "..name)
 	local string = LoadService:GetAsync(link,true)
