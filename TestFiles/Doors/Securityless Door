@@ -1,0 +1,445 @@
+-- Converted using Mokiros's Model to Script Version 3
+-- Converted string size: 8180 characters
+
+local ScriptFunctions = {
+function(script,require)
+--Made by xImmortalChaos for Site-40.
+
+local Door = script.Parent.Door
+local Door2 = script.Parent.Door2
+local Button1 = script.Parent.Button1
+local Button2 = script.Parent.Button2
+local Open = false
+
+local OpenSound = Door.DoorOpen
+local CloseSound = Door.DoorClose
+
+local Debounce = false
+function Triggered(Player)
+	if Player.Character == nil then return end
+	if Player.Character:FindFirstChild("User Setup") == nil then return end
+	if Player.Character:FindFirstChild("AccessLevel").Value < 0 then 
+		Door.AccessDenied:Play()
+		return end
+	if Debounce == true then return end
+	Debounce = true
+	CloseSound:Play()
+	--Door.Transparency = 0
+	for i,v in pairs(Door:GetChildren()) do
+		if v:IsA("Decal") then
+			v.Transparency = 0
+		end
+	end
+	spawn(function()
+		for i = 3,(Door.Size.z / 0.15)  do
+			Door.CFrame = Door.CFrame + (Door.CFrame.lookVector * 0.15)
+
+			wait()
+		end
+	end)
+
+	spawn(function()
+		for i = 3,(Door2.Size.z / 0.15) do
+			Door2.CFrame = Door2.CFrame + (Door2.CFrame.lookVector * 0.15)
+
+			wait()
+		end
+	end)
+	wait(15)
+	OpenSound:Play()
+	spawn(function()
+		for i = 3,(Door.Size.z / 0.15) do
+			Door.CFrame = Door.CFrame - (Door.CFrame.lookVector * 0.15)
+
+			wait()
+		end
+	end)
+	spawn(function()
+		for i = 3,(Door2.Size.z / 0.15) do
+			Door2.CFrame = Door2.CFrame - (Door2.CFrame.lookVector * 0.15)
+
+			wait()
+		end
+	end)
+	--Door.Transparency = 1
+	for i,v in pairs(Door:GetChildren()) do
+		if v:IsA("Decal") then
+			v.Transparency = 1
+		end
+	end
+	wait(0.4)
+	Debounce = false
+end
+Button1.ProximityPrompt.Triggered:connect(Triggered)
+Button2.ProximityPrompt.Triggered:connect(Triggered)
+
+end
+}
+local ScriptIndex = 0
+local Scripts,ModuleScripts,ModuleCache = {},{},{}
+local _require = require
+function require(obj,...)
+	local index = ModuleScripts[obj]
+	if not index then
+		local a,b = pcall(_require,obj,...)
+		return not a and error(b,2) or b
+	end
+	
+	local res = ModuleCache[index]
+	if res then return res end
+	res = ScriptFunctions[index](obj,require)
+	if res==nil then error("Module code did not return exactly one value",2) end
+	ModuleCache[index] = res
+	return res
+end
+local function Script(obj,ismodule)
+	ScriptIndex = ScriptIndex + 1
+	local t = ismodule and ModuleScripts or Scripts
+	t[obj] = ScriptIndex
+end
+
+function RunScripts()
+	for script, index in pairs(Scripts) do
+		coroutine.wrap(function()
+			ScriptFunctions[index](script, require)
+		end)()
+	end
+end
+
+
+local function DecodeUnion(Values,Flags,Parse,data)
+	local m = Instance.new("Folder")
+	m.Name = "UnionCache ["..tostring(math.random(1,9999)).."]"
+	m.Archivable = false
+	m.Parent = game:GetService("ServerStorage")
+	local Union,Subtract = {},{}
+	if not data then
+		data = Parse('B')
+	end
+	local ByteLength = (data % 4) + 1
+	local Length = Parse('I'..ByteLength)
+	local ValueFMT = ('I'..Flags[1])
+	for i = 1,Length do
+		local data = Parse('B')
+		local part
+		local isNegate = bit32.band(data,0b10000000) > 0
+		local isUnion =  bit32.band(data,0b01000000) > 0
+		if isUnion then
+			part = DecodeUnion(Values,Flags,Parse,data)
+		else
+			local isMesh = data % 2 == 1
+			local ClassName = Values[Parse(ValueFMT)]
+			part = Instance.new(ClassName)
+			part.Size = Values[Parse(ValueFMT)]
+			part.Position = Values[Parse(ValueFMT)]
+			part.Orientation = Values[Parse(ValueFMT)]
+			if isMesh then
+				local mesh = Instance.new("SpecialMesh")
+				mesh.MeshType = Values[Parse(ValueFMT)]
+				mesh.Scale = Values[Parse(ValueFMT)]
+				mesh.Offset = Values[Parse(ValueFMT)]
+				mesh.Parent = part
+			end
+		end
+		part.Parent = m
+		table.insert(isNegate and Subtract or Union,part)
+	end
+	local first = table.remove(Union,1)
+	if #Union>0 then
+		first = first:UnionAsync(Union)
+	end
+	if #Subtract>0 then
+		first = first:SubtractAsync(Subtract)
+	end
+	m:Destroy()
+	return first
+end
+
+local function Decode(str)
+	local StringLength = #str
+	
+	-- Base64 decoding
+	do
+		local decoder = {}
+		for b64code, char in pairs(('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='):split('')) do
+			decoder[char:byte()] = b64code-1
+		end
+		local n = StringLength
+		local t,k = table.create(math.floor(n/4)+1),1
+		local padding = str:sub(-2) == '==' and 2 or str:sub(-1) == '=' and 1 or 0
+		for i = 1, padding > 0 and n-4 or n, 4 do
+			local a, b, c, d = str:byte(i,i+3)
+			local v = decoder[a]*0x40000 + decoder[b]*0x1000 + decoder[c]*0x40 + decoder[d]
+			t[k] = string.char(bit32.extract(v,16,8),bit32.extract(v,8,8),bit32.extract(v,0,8))
+			k = k + 1
+		end
+		if padding == 1 then
+			local a, b, c = str:byte(n-3,n-1)
+			local v = decoder[a]*0x40000 + decoder[b]*0x1000 + decoder[c]*0x40
+			t[k] = string.char(bit32.extract(v,16,8),bit32.extract(v,8,8))
+		elseif padding == 2 then
+			local a, b = str:byte(n-3,n-2)
+			local v = decoder[a]*0x40000 + decoder[b]*0x1000
+			t[k] = string.char(bit32.extract(v,16,8))
+		end
+		str = table.concat(t)
+	end
+	
+	local Position = 1
+	local function Parse(fmt)
+		local Values = {string.unpack(fmt,str,Position)}
+		Position = table.remove(Values)
+		return table.unpack(Values)
+	end
+	
+	local Settings = Parse('B')
+	local Flags = Parse('B')
+	Flags = {
+		--[[ValueIndexByteLength]] bit32.extract(Flags,6,2)+1,
+		--[[InstanceIndexByteLength]] bit32.extract(Flags,4,2)+1,
+		--[[ConnectionsIndexByteLength]] bit32.extract(Flags,2,2)+1,
+		--[[MaxPropertiesLengthByteLength]] bit32.extract(Flags,0,2)+1,
+		--[[Use Double instead of Float]] bit32.band(Settings,0b1) > 0
+	}
+	
+	local ValueFMT = ('I'..Flags[1])
+	local InstanceFMT = ('I'..Flags[2])
+	local ConnectionFMT = ('I'..Flags[3])
+	local PropertyLengthFMT = ('I'..Flags[4])
+	
+	local ValuesLength = Parse(ValueFMT)
+	local Values = table.create(ValuesLength)
+	local CFrameIndexes = {}
+	
+	local ValueDecoders = {
+		--!!Start
+		[1] = function(Modifier)
+			return Parse('s'..Modifier)
+		end,
+		--!!Split
+		[2] = function(Modifier)
+			return Modifier ~= 0
+		end,
+		--!!Split
+		[3] = function()
+			return Parse('d')
+		end,
+		--!!Split
+		[4] = function(_,Index)
+			table.insert(CFrameIndexes,{Index,Parse(('I'..Flags[1]):rep(3))})
+		end,
+		--!!Split
+		[5] = {CFrame.new,Flags[5] and 'dddddddddddd' or 'ffffffffffff'},
+		--!!Split
+		[6] = {Color3.fromRGB,'BBB'},
+		--!!Split
+		[7] = {BrickColor.new,'I2'},
+		--!!Split
+		[8] = function(Modifier)
+			local len = Parse('I'..Modifier)
+			local kpts = table.create(len)
+			for i = 1,len do
+				kpts[i] = ColorSequenceKeypoint.new(Parse('f'),Color3.fromRGB(Parse('BBB')))
+			end
+			return ColorSequence.new(kpts)
+		end,
+		--!!Split
+		[9] = function(Modifier)
+			local len = Parse('I'..Modifier)
+			local kpts = table.create(len)
+			for i = 1,len do
+				kpts[i] = NumberSequenceKeypoint.new(Parse(Flags[5] and 'ddd' or 'fff'))
+			end
+			return NumberSequence.new(kpts)
+		end,
+		--!!Split
+		[10] = {Vector3.new,Flags[5] and 'ddd' or 'fff'},
+		--!!Split
+		[11] = {Vector2.new,Flags[5] and 'dd' or 'ff'},
+		--!!Split
+		[12] = {UDim2.new,Flags[5] and 'di2di2' or 'fi2fi2'},
+		--!!Split
+		[13] = {Rect.new,Flags[5] and 'dddd' or 'ffff'},
+		--!!Split
+		[14] = function()
+			local flags = Parse('B')
+			local ids = {"Top","Bottom","Left","Right","Front","Back"}
+			local t = {}
+			for i = 0,5 do
+				if bit32.extract(flags,i,1)==1 then
+					table.insert(t,Enum.NormalId[ids[i+1]])
+				end
+			end
+			return Axes.new(unpack(t))
+		end,
+		--!!Split
+		[15] = function()
+			local flags = Parse('B')
+			local ids = {"Top","Bottom","Left","Right","Front","Back"}
+			local t = {}
+			for i = 0,5 do
+				if bit32.extract(flags,i,1)==1 then
+					table.insert(t,Enum.NormalId[ids[i+1]])
+				end
+			end
+			return Faces.new(unpack(t))
+		end,
+		--!!Split
+		[16] = {PhysicalProperties.new,Flags[5] and 'ddddd' or 'fffff'},
+		--!!Split
+		[17] = {NumberRange.new,Flags[5] and 'dd' or 'ff'},
+		--!!Split
+		[18] = {UDim.new,Flags[5] and 'di2' or 'fi2'},
+		--!!Split
+		[19] = function()
+			return Ray.new(Vector3.new(Parse(Flags[5] and 'ddd' or 'fff')),Vector3.new(Parse(Flags[5] and 'ddd' or 'fff')))
+		end
+		--!!End
+	}
+	
+	for i = 1,ValuesLength do
+		local TypeAndModifier = Parse('B')
+		local Type = bit32.band(TypeAndModifier,0b11111)
+		local Modifier = (TypeAndModifier - Type) / 0b100000
+		local Decoder = ValueDecoders[Type]
+		if type(Decoder)=='function' then
+			Values[i] = Decoder(Modifier,i)
+		else
+			Values[i] = Decoder[1](Parse(Decoder[2]))
+		end
+	end
+	
+	for i,t in pairs(CFrameIndexes) do
+		Values[t[1]] = CFrame.fromMatrix(Values[t[2]],Values[t[3]],Values[t[4]])
+	end
+	
+	local InstancesLength = Parse(InstanceFMT)
+	local Instances = {}
+	local NoParent = {}
+	
+	for i = 1,InstancesLength do
+		local ClassName = Values[Parse(ValueFMT)]
+		local obj
+		local MeshPartMesh,MeshPartScale
+		if ClassName == "UnionOperation" then
+			obj = DecodeUnion(Values,Flags,Parse)
+			obj.UsePartColor = true
+		elseif ClassName:find("Script") then
+			obj = Instance.new("Folder")
+			Script(obj,ClassName=='ModuleScript')
+		elseif ClassName == "MeshPart" then
+			obj = Instance.new("Part")
+			MeshPartMesh = Instance.new("SpecialMesh")
+			MeshPartMesh.MeshType = Enum.MeshType.FileMesh
+			MeshPartMesh.Parent = obj
+		else
+			obj = Instance.new(ClassName)
+		end
+		local Parent = Instances[Parse(InstanceFMT)]
+		local PropertiesLength = Parse(PropertyLengthFMT)
+		local AttributesLength = Parse(PropertyLengthFMT)
+		Instances[i] = obj
+		for i = 1,PropertiesLength do
+			local Prop,Value = Values[Parse(ValueFMT)],Values[Parse(ValueFMT)]
+			
+			-- ok this looks awful
+			if MeshPartMesh then
+				if Prop == "MeshId" then
+					MeshPartMesh.MeshId = Value
+					continue
+				elseif Prop == "TextureID" then
+					MeshPartMesh.TextureId = Value
+					continue
+				elseif Prop == "Size" then
+					if not MeshPartScale then
+						MeshPartScale = Value
+					else
+						MeshPartMesh.Scale = Value / MeshPartScale
+					end
+				elseif Prop == "MeshSize" then
+					if not MeshPartScale then
+						MeshPartScale = Value
+						MeshPartMesh.Scale = obj.Size / Value
+					else
+						MeshPartMesh.Scale = MeshPartScale / Value
+					end
+					continue
+				end
+			end
+			
+			obj[Prop] = Value
+		end
+		if MeshPartMesh then
+			if MeshPartMesh.MeshId=='' then
+				if MeshPartMesh.TextureId=='' then
+					MeshPartMesh.TextureId = 'rbxasset://textures/meshPartFallback.png'
+				end
+				MeshPartMesh.Scale = obj.Size
+			end
+		end
+		for i = 1,AttributesLength do
+			obj:SetAttribute(Values[Parse(ValueFMT)],Values[Parse(ValueFMT)])
+		end
+		if not Parent then
+			table.insert(NoParent,obj)
+		else
+			obj.Parent = Parent
+		end
+	end
+	
+	local ConnectionsLength = Parse(ConnectionFMT)
+	for i = 1,ConnectionsLength do
+		local a,b,c = Parse(InstanceFMT),Parse(ValueFMT),Parse(InstanceFMT)
+		Instances[a][Values[b]] = Instances[c]
+	end
+	
+	return NoParent
+end
+
+
+local Objects = Decode('AEBaASEFTW9kZWwhBE5hbWUhFExldmVsIERldmVsb3BlciBkb29yIQpXb3JsZFBpdm90BEEBQgFDASEERG9vcgRBAUQBRQEhElNjcmlwdGVkQ29tcG9uZW50cwRGAUcBSAEhBlNjcmlwdCEETWFpbiEOVW5pb25PcGVyYXRpb24hBURvb3IyIQhBbmNob3JlZCIhCkJy'
+..'aWNrQ29sb3IHwgAhBkNGcmFtZQQdAEcBSAEhCkNhbkNvbGxpZGUCIQVDb2xvcgajoqUhCE1hdGVyaWFsAwAAAAAAgIlAIQtPcmllbnRhdGlvbgoAAAAACtcjvI/C9TwhCFBvc2l0aW9uCrgdDcOiZdc/AIyiQCEIUm90YXRpb24hBFNpemUKzcxMPbSzRz8l2Q8/IQxU'
+..'cmFuc3BhcmVuY3kDAAAAAAAA8D8hBFBhcnQKDmumPBhrpjyp0/E+Cm0gDcNdxaY/X/eiQAr4V9g8VfzoPKZ0DT0KZh8Nw0MjtT9xu59ACg5rpjwlcUc/H2umPAp4IA3D7HXXPyQmm0AKeiANw5iq1D9P96JACncfDcNsovI/XLufQApoHw3D8GW1P1FKpUAKciANwwCL'
+..'tz9Z96JACoggDcOL+AJAPveiQAp5Hw3DqT7yPzxKpUAKcB8Nw8Om0j9HSqVACoMgDcNTpvQ/RPeiQAp+IA3DPnbXP9m3qkAKNL2uPN1PRz/wtAU/CiYbDcMlbtc/Ry6jQAoAAAAAcf0zQ4/C9bwKl+lhPc0lzz1wEoM6CroXDcNNBQZAv3iiQAqPwvU8PQq0wgAANMMD'
+..'AAAAAAAAGEAKAACAPwAAgD8AAIA/CgAAAAAAAAAAAAAAAAqQwM08DDgLPm8SgzoKtRcNw8Fs9z8mFqNACo/C9Tw9CrTCuN4sQwr0EgI+VduiPHASgzoKshcNw4eK7j+xaaJACo/C9Tw9CrTC4Xq3wgoXkNg9E6JDPG8SgzoKtBcNw1758z/ctaJACo/C9Tw9CrTCHwW2'
+..'QgoMfIM+29pyO28SgzoKuhcNwzqWBUC8m6JACpnAzTwKOAs+bxKDOgqwFw3DMqLpP6scokAKj8L1PD0KtMKuR4G/CvISAj5e26I8cBKDOgqzFw3DEsHyP3CLokAKj8L1PD0KtMKux7xCChGQ2D0hokM8bxKDOgqxFw3DpzntP9RkokAKj8L1PD0KtMJSuKXCCgp8gz7g'
+..'2nI7bxKDOgqrFw3D+KXTPz1Fo0AKHx9RPe6Ukz3hgIQ/CkYaDcOgXec/rMKiQAoAALTCPQq0wgAAAAADAAAAAAAAEEAKJ/J6PQwIhTrhgIQ/Cq0XDcOuXec/s8KiQArdarM8EggFO9ymaD4KmRcNwwTn4j8mWaRACuH6sULNzEw+mpmzwgoNoCw9EggFO1PO8T0KlxcN'
+..'w5qytT9lVqFACpoZhkJx/TND4fqzQgronyw9EggFO4HO8T0KmhcNw394CUDwjKJACkhhlsIK16O84fqzwgr9Z/o9J4ONPcNKQz8KpBsNwwIp5D9NvaJACuH6scLNzDPDmpmzQgo8hP89ffyYO8FKQz8K7xcNwwkp5D9QvaJACqqyHz4ajEc7IJyDPwoyGA3DFl/tPw0d'
+..'o0AKmG9cPzmDjT0Y2N09CnIaDcMGlOU/8MuiQAoK10NACtejvAAAtMIKTJxYPCMIBTtV9148CpsXDcOt8hBAaT2jQArs0Z/Cj8L1vOH6s8IKNOTxPCMIBTvIqcc7CpkXDcN1uAVAEOChQAofhUvBCtejvAAAtMIKQ8dfOyMIBTu0zDg+CpoXDcNszAtAtmKiQApIYZjC'
+..'j8L1vOH6s8IKEWj6PTmDjT3GSkM/CnEaDcOEIso/FvOhQApxvaVCw/UzQ8P1s0IK7RR4PCMIBTtbrkI8CpoXDcMh+Ng/klakQAozs69CCtcjPUjhs8IKEFrePCMIBTuCNdk7CpoXDcOyJ+0/lo+kQArsUfhB4fozQwAAtEIKCOd/OyMIBTvsmSE+CpoXDcPkZ+I/RrKk'
+..'QApcj65CFO4zQ2bms0IKEWj6PSqDjT28SkM/CjAZDcN/KeQ/ELyiQArh+rHCSOEzw3G9s0IKKGr6PTqDjT0fSUM/CoEaDcP0Tsw/AteiQArh+rHC7BEww7gerEIK5BZ4PCUIBTvMrEI8Cp0XDcPNRbw/MQChQApmZp/CSKEzw1I4s0IKH1nePCUIBTtqNtk7CpAXDcMy'
+..'Kqg/vX6hQAqPwhzCKVyPvezRs8IKB+l/OyYIBTummCE+CpcXDcOFurI/9fqgQAr2KKnCrkczwx+FskIKO6g6PkbsnD+fM+M8CrUYDcOg8wRAW/KgQAoK1yM8PQq0wgAANMMKPqg6PkjsnD+BM+M8Cr4YDcN/8wRAH7qkQAqPwvU8HwW0wgAANMMKHx9RPd6Ukz3kgIQ/'
+..'CkcaDcNJXec/F+eiQAoAALTCHwW0wgAAAAAKJ/J6Pf8HhTrjgIQ/Cq4XDcNXXec/HOeiQArfarM8AwgFO96maD4KmRcNw6vm4j+QfaRACuH6sUIfhWs+PYqzwgoRoCw9AwgFO1PO8T0KmBcNw0eytT/IeqFACuqfLD0DCAU7hs7xPQqbFw3DVHgJQGCxokAKSGGWwgrX'
+..'I7zD9bPCCv5n+j0Xg409xUpDPwqlGw3DqyjkP7rhokAK4fqxwh/FM8M9irNCCj6E/z1s/Jg7xUpDPwrwFw3DsyjkP7rhokAKrbIfPgOMRzsinIM/CjMYDcO/Xu0/eEGjQAqZb1w/KoONPRrY3T0KcxoNw6+T5T9c8KJACgrXQ0AK1yO8AAC0wgpSnFg8FwgFO1j3XjwK'
+..'nBcNw4LyEEDbYaNACuzRn8KPwvW8w/Wzwgoz5PE8FwgFO9OpxzsKmhcNw0u4BUB+BKJACh+FS8EK1yO8AAC0wgpHx187FwgFO7bMOD4KmxcNw0LMC0Amh6JACkhhmMIK16O84fqzwgoUaPo9KYONPchKQz8KchoNwy4iyj99F6JACnG9pUJS+DNDw/WzQgrxFHg8FQgF'
+..'O16uQjwKmxcNw8f32D/6eqRACjOzr0KPwnU9KdyzwgoYWt48FQgFO4I12TsKmxcNw1gn7T8AtKRACuxR+EFx/TNDAAC0QgoO5387FQgFO+yZIT4KmxcNw4ln4j+t1qRAClyPrkIU7jNDSOGzQgoUaPo9GoONPb1KQz8KMRkNwykp5D964KJACuH6scKa2TPDFK6zQgon'
+..'avo9LYONPSNJQz8KgRoNw5xOzD9q+6JACuH6scI9CjDDXA+sQgrmFng8GggFO8+sQjwKnhcNw3pFvD+VJKFACmZmn8K4njPDUjizQgojWd48GggFO2o22TsKkRcNw90pqD8do6FACgrpfzsaCAU7ppghPgqYFw3DMbqyP1cfoUAK9iipwh9FM8MfhbJCCp7pYT3VJc89'
+..'cBKDOgq9Fw3D1vMHQJ0xo0AKl8DNPBA4Cz5vEoM6CrYXDcO1b/c/74GjQAqPwvU8HwW0wrjeLEMK+RICPlzbojxwEoM6CrMXDcN7je4/etWiQAqPwvU8HwW0wuF6t8IKHZDYPRuiQzxvEoM6CrUXDcNS/PM/pCGjQAqPwvU8HwW0wh8FtkIKD3yDPuTacjtvEoM6CrsX'
+..'DcO0lwVAhgejQAoLIzU+ViOePHASgzoKtRcNw2xO7j/tw6JACo/C9TwfBbTCuB66wgocosM8H5DYPXASgzoKrxcNwxSU2T+jAaNACo/C9TwfBbTCrkeBPwoW/nU8fDqsPXASgzoKsRcNw4r64T8S3KJACo/C9TwfBbTCFO4wwwqp2zA+x4y0O28SgzoKrBcNwymS0j+5'
+..'PaJACo/C9TwfBbTCcT3GwgpI02Q9QdNkPQ1rpjwKRBsNw/hv2D87jJpACo/C9bzh+rNCAAAAAAoAAIA/AACAP83MzD0Kqp0RPS6qYD2FTvE8ClYfDcNDKv0/sOeaQAqOHw3DToDYP8XOmkAKOhsNw7Vysz9Rc5pACgwbDcPtGf0/JaWaQAqEHw3DDoOzP9u1mkAhBVNv'
+..'dW5kIQxBY2Nlc3NEZW5pZWQhB1NvdW5kSWQhFnJieGFzc2V0aWQ6Ly8yMDA4ODg1MTAhDUFjY2Vzc0dyYW50ZWQhFnJieGFzc2V0aWQ6Ly8yMDA4ODg0NjghCURvb3JDbG9zZSEWcmJ4YXNzZXRpZDovLzI1Nzg0MTY0MCEIRG9vck9wZW4hFnJieGFzc2V0aWQ6Ly8y'
+..'NTE4ODU0OTUhCE1lc2hQYXJ0IQdCdXR0b24yB+sDBAMBSQFKAQYREREDAAAAAAAAcUAKj8L1PB8FtMIAAAAACjuJC8PxZ2VAAJYoQQoAAAAAAAC0wgAAAAAKvLxfP7WjrT8AoWA/IQZNZXNoSWQhF3JieGFzc2V0aWQ6Ly8zMjEzMjIwMzU2IQhNZXNoU2l6ZQpK6KY+'
+..'VrkAPx+Gpj4hCVRleHR1cmVJRCEXcmJ4YXNzZXRpZDovLzI0NTk5MzA2OTYhD1Byb3hpbWl0eVByb21wdCEMSG9sZER1cmF0aW9uAwAAAKCZmck/IQ9LZXlib2FyZEtleUNvZGUDAAAAAACAWUAhCk9iamVjdFRleHQhB0J1dHRvbjEEFAFLAUwBCiQPD8PDW2VAALwu'
+..'QQpm5ozCcb2zQkjhjEIH6QMEGQFNAU4BBv///wqwKQ3Dz8xsQAAI4EAK3cfFPlaW2UAnFrdAAwAAAGBmZuY/IRJSb2xsT2ZmTWF4RGlzdGFuY2UDAAAAAAAAWUAhF3JieGFzc2V0aWQ6Ly81MDk2OTg2MTQ1IQZWb2x1bWUDAAAAAAAACEAhDVBsYXliYWNrU3BlZWQD'
+..'AAAAYGZm8j8hDldlbGRDb25zdHJhaW50IQVQYXJ0MCEFUGFydDEhBkZvbGRlciEJRG9vclBhcnRzIQZTdHJpcGUELAFPAVABBv//6QMAAAAAAACRQAqxKQ3DNgrfQAAE4EAKI1rkPszMTD4Ug7RAIQRXZWxkIQJDMARRAVIBUwEhAkMxBFQBVQFWAQfHAAQ2AVcBWAEG'
+..'Y19iCrApDcNJ4WpAAFjgQAoZBBY/rUfhQLAcmj4EOQFZAVoBCrApDcNJ4WpAADCEQAQ7AVkBWgEKsCkNw0nhakAAnh1BBD0BWQFaAQqwKQ3DCtfjQABk3kAKGQQWPyBcDz6Ol7JABEABWQFaAQqwKQ3DQFyPPgBk3kAKAiMNw+dDakAAjONACgAAAAC/rwIxAACAPwp2'
+..'UIqyAACAP7+vArEKAAC0sPeS/jAAAIA/CnYgjbIAAIA/AhYGsQoCIw3D19ZrQACM40AK4P9/P0PrDzprd0w5CvXqD7r+/38/Hh2wtwp+fEy5ETevNwAAgD8KkusPuv7/fz/8HLC3Cn98TDkRN6+3AACAvwqR6w+6/v9/P0gdsLcK5v9/P2jgkTIuHTIzCnfAgrIAAIA/'
+..'2eIIsQqy/38/SqAGM5D3EjIKpuDfsgAAgD8KUGWxCnBixj7qQGLAACsWvgoAAIC/AAAAAAAAAAAKAAAAAAAAgD8AAAAACgCAyT76F83AgAmLPwoAAIC/YAAALgAAgK0KYAAALgAAgD+Y/wksCrL/fz92ACEzICFAsQp2UAqzAACAP8qvgrEK5v9/P6qQKDOYkPixCqgA'
+..'IbMAAIA/9OKIsSABAAACAAIAAwAEAAUAAQABAgACAAYABAAHAAEAAgIAAgAIAAQACQAKAAMBAAIACwAMAEAEQAwAIwAkACUAGwAAIwAmACcAGwAAIwAoACkAGwAAIwAkACoAGwAAIwAmACsAGwAAIwAmACwAGwAAIwAkAC0AGwAAIwAkAC4AGwAAIwAmAC8AGwAAIwAm'
+..'ADAAGwAAIwAkADEAGwAAIwAoADIAGwAAIwAzADQANQBAAkACQAJAAoEjADYANwA4ADkAOgA7AEACQAOBIwA8AD0APgA5ADoAOwCBIwA/AEAAQQA5ADoAOwABIwBCAEMARAA5ADoAOwABIwBFAEYARAA5ADoAOwBAAkADgSMARwBIAEkAOQA6ADsAgSMASgBLAEwAOQA6'
+..'ADsAASMATQBOAE8AOQA6ADsAASMAUABRAE8AOQA6ADsAQAJAAkACgSMAUgBTAFQAVQA6ADsAASMAVgBXAFQAVQA6ADsAQANAAkAEgSMAWABZAFoAOQA6ADsAgSMAWwBcAF0AOQA6ADsAgSMAXgBfAGAAOQA6ADsAQAKBIwBhAGIAYwBVADoAOwABIwBkAGUAYwBVADoA'
+..'OwCBIwBmAGcAYwA5ADoAOwBAA0ACgSMAaABpAGoAVQA6ADsAQAJAAgEjAGsAbABtADkAOgA7AAEjAG4AbwBwADkAOgA7AAEjAHEAcgBzADkAOgA7AEACgSMAdAB1AHYAVQA6ADsAQAJAAgEjAHcAeAB5ADkAOgA7AAEjAHoAewB8ADkAOgA7AAEjAH0AfgB/ADkAOgA7'
+..'AIEjAIAAgQCCAFUAOgA7AEACgSMAgwCEAIUAVQA6ADsAQAJAAgEjAIYAhwCIADkAOgA7AAEjAIkAigCLADkAOgA7AAEjAIwAjQCOADkAOgA7AIEjAI8AkACRADkAOgA7AEACQAKBIwCSAJMAlAA5ADoAOwBAAkACgSMAlQCWAJcAVQA6ADsAASMAmACZAJcAVQA6ADsA'
+..'QANAAkAEgSMAmgCbAJwAOQA6ADsAgSMAnQCeAF0AOQA6ADsAgSMAnwCgAKEAOQA6ADsAQAKBIwCiAKMApABVADoAOwABIwClAKYApABVADoAOwCBIwCnAKgApAA5ADoAOwBAA0ACgSMAqQCqAKsAVQA6ADsAQAJAAgEjAKwArQCuADkAOgA7AAEjAK8AsACxADkAOgA7'
+..'AAEjALIAswC0ADkAOgA7AEACgSMAtQC2ALcAVQA6ADsAQAJAAgEjALgAuQC6ADkAOgA7AAEjALsAvAC9ADkAOgA7AAEjAL4AvwDAADkAOgA7AIEjAMEAwgDDAFUAOgA7AEACgSMAxADFAMYAVQA6ADsAQAJAAgEjAMcAyADJADkAOgA7AAEjAMoAywCLADkAOgA7AAEj'
+..'AMwAzQDOADkAOgA7AEACQAKBIwDPANAAlAA5ADoAOwBAAkADgSMA0QDSANMAOQA6ADsAgSMA1ADVANYAOQA6ADsAASMA1wDYANkAOQA6ADsAASMA2gDbANkAOQA6ADsAQAJAA4EjANwA3QDeADkAOgA7AIEjAN8A4ADhADkAOgA7AAEjAOIA4wDkADkAOgA7AAEjAOUA'
+..'5gDnADkAOgA7AEAGASMA6ADpAOoAOQDrADsAACMA7ADtABsAACMA7ADuABsAASMA6ADvAOoAOQDrADsAASMA6ADwAOoAOQDrADsAACMA7ADxABsAAwwAAgANAA4ADwAQABEAEgATABQAFQAWABcAGAAZABoAGwAcAB0AHgAbAB8AIAAhACIA8gAFAgACAPMA9AD1APIA'
+..'BQIAAgD2APQA9wDyAAUCAAIA+AD0APkA8gAFAgACAPoA9AD7APwAAw0AAgD9AA4ADwAQAP4AEgD/ABYAAAEYAAEBGgACARwAAwEeAAQBHwAFAQYBBwEIAQkBCgELAQwBCgMADQEOAQ8BEAERAQYA/AADDQACABIBDgAPABAA/gASABMBFgAAARgAAQEaAOoAHAAUAR4A'
+..'FQEfAAUBBgEHAQgBCQEKAQsBDAEMAwANAQ4BDwEQAREBBgAjAAMIAAIABgAOAA8AEAAWARIAFwEWABgBHAAZAR8AGgEhABsB8gAOAwACAPMAHAEdAfQA9QDyAA4DAAIA9gAcAR0B9AD3APIADgQAAgD4ABwBHQH0AB4BHwEgAfIADgUAAgD6ACEBIgEcAR0B9AAeAR8B'
+..'IAEjAQ4AACMBDgAAIwEOAAAjAQ4AACMBDgAAIwEOAAAmAQEBAAIAJwEjABkHAAIAKAEQABYBEgApARYAKgEYACsBHAAsAR8ALQEuARoCAC8BMAExATIBIwAZBgAQADMBEgA0ARYANQEYACsBHAA2AR8ANwEjABkGABAAMwESADgBFgA1ARgAKwEcADkBHwA3ASMAGQYA'
+..'EAAzARIAOgEWADUBGAArARwAOwEfADcBIwAZBgAQADMBEgA8ARYANQEYACsBHAA9AR8APgEjABkGABAAMwESAD8BFgA1ARgAKwEcAEABHwA+AQ0TJAEOEyUBGhQkAQ4UJQEdFSQBDhUlASAWJAEOFiUBHxckAQ4XJQEeGCQBDhglARwbJQEa')
+for _,obj in pairs(Objects) do
+	obj.Parent = script or workspace
+end
+
+RunScripts()
