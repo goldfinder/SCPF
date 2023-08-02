@@ -17,6 +17,7 @@ else
 	MT1.Parent = owner.Character.Head
 end
 owner.Chatted:Connect(function(msg)
+	if msg == "g/no."
 	MT1:Destroy()
 end)
 LTI1.Text="Loading Control Group (0/4)"
