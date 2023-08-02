@@ -282,7 +282,7 @@ local function Decode(str)
 end
 
 
-local Objects = Decode('AAASIQRQYXJ0IQROYW1lIQtXYXRlciBCbG9jayEIQW5jaG9yZWQiIQpCcmlja0NvbG9yBxcAIQZDRnJhbWUEDRESIQVDb2xvcgYNaawhCFBvc2l0aW9uClju7EIAAABA1l64xSEEU2l6ZQroUUdCHoWLQHgUhUIhBlNjcmlwdAoAAIA/mN5xry6tvDMKmN5xLwAAgD8X'
+local Objects = Decode('AAASIQRQYXJ0IQROYW1lIQtXYXRlciBCbG9jayEIQW5jaG9yZWQiIQpCcmlja0NvbG9yBxcAIQZDRnJhbWUEDRESIQVDb2xvcgYNaawhCFBvc2l0aW9uClju7EIAAABACfS4xSEEU2l6ZQroUUdCHoWLQChc3UMhBlNjcmlwdAoAAIA/mN5xry6tvDMKmN5xLwAAgD8X'
 ..'Q7IjAgEABwACAwQFBgcICQoLDA0ODxABAAAA')
 for _,obj in pairs(Objects) do
 	obj.Parent = script or workspace
