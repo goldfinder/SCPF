@@ -4,7 +4,7 @@
 local ScriptFunctions = {
 function(script,require)
 script.Parent.Triggered:Connect(function(plr)
-	plr.Character:MoveTo(script.Parent.Parent.Part2.Position)
+	plr.Character:MoveTo(script.Parent.Parent.Parent.Part2.Position)
 end)
 
 end,
