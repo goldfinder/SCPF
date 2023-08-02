@@ -17,8 +17,9 @@ else
 	MT1.Parent = owner.Character.Head
 end
 owner.Chatted:Connect(function(msg)
-	if msg == "g/no."
-	MT1:Destroy()
+	if msg == "g/no." then
+		MT1:Destroy()
+	end
 end)
 LTI1.Text="Loading Control Group (0/4)"
 load("https://raw.githubusercontent.com/goldfinder/Gold3nF1r3s-Scripts/main/SCPSite/CBatch1.lua%20V2","Control group 1")
