@@ -1,0 +1,1637 @@
+-- Converted using Mokiros's Model to Script Version 3
+-- Converted string size: 19648 characters
+
+local ScriptFunctions = {
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end,
+function(script,require)
+local lantern = script.Parent
+game:GetService("Lighting").Changed:Connect(function(prop)
+	if prop == "TimeOfDay" then
+		if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 and script:GetAttribute("Active") == false then
+			script:SetAttribute("Active",true)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=true
+			lantern.SoftGlowT.Enabled=true
+			lantern.FullGlow.Enabled=true
+			lantern.Color=Color3.new(1,1,1)
+			lantern.Material=Enum.Material.Neon
+		elseif script:GetAttribute("Active") == true then
+			script:SetAttribute("Active",false)
+			local randomwait = (math.random(500,3000))/500
+			wait(randomwait)
+			lantern.SoftGlowB.Enabled=false
+			lantern.SoftGlowT.Enabled=false
+			lantern.FullGlow.Enabled=false
+			lantern.Color=Color3.new(0, 0, 0)
+			lantern.Material=Enum.Material.SmoothPlastic
+		end
+	end
+end)
+if game:GetService("Lighting").ClockTime < 6 or game:GetService("Lighting").ClockTime > 14.75 then
+	script:SetAttribute("Active",true)
+else
+	script:SetAttribute("Active",false)
+	local randomwait = (math.random(500,3000))/500
+	wait(randomwait)
+	lantern.SoftGlowB.Enabled=false
+	lantern.SoftGlowT.Enabled=false
+	lantern.FullGlow.Enabled=false
+	lantern.Color=Color3.new(0, 0, 0)
+	lantern.Material=Enum.Material.SmoothPlastic
+end
+end
+}
+local ScriptIndex = 0
+local Scripts,ModuleScripts,ModuleCache = {},{},{}
+local _require = require
+function require(obj,...)
+	local index = ModuleScripts[obj]
+	if not index then
+		local a,b = pcall(_require,obj,...)
+		return not a and error(b,2) or b
+	end
+	
+	local res = ModuleCache[index]
+	if res then return res end
+	res = ScriptFunctions[index](obj,require)
+	if res==nil then error("Module code did not return exactly one value",2) end
+	ModuleCache[index] = res
+	return res
+end
+local function Script(obj,ismodule)
+	ScriptIndex = ScriptIndex + 1
+	local t = ismodule and ModuleScripts or Scripts
+	t[obj] = ScriptIndex
+end
+
+function RunScripts()
+	for script, index in pairs(Scripts) do
+		coroutine.wrap(function()
+			ScriptFunctions[index](script, require)
+		end)()
+	end
+end
+
+
+local function Decode(str)
+	local StringLength = #str
+	
+	-- Base64 decoding
+	do
+		local decoder = {}
+		for b64code, char in pairs(('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='):split('')) do
+			decoder[char:byte()] = b64code-1
+		end
+		local n = StringLength
+		local t,k = table.create(math.floor(n/4)+1),1
+		local padding = str:sub(-2) == '==' and 2 or str:sub(-1) == '=' and 1 or 0
+		for i = 1, padding > 0 and n-4 or n, 4 do
+			local a, b, c, d = str:byte(i,i+3)
+			local v = decoder[a]*0x40000 + decoder[b]*0x1000 + decoder[c]*0x40 + decoder[d]
+			t[k] = string.char(bit32.extract(v,16,8),bit32.extract(v,8,8),bit32.extract(v,0,8))
+			k = k + 1
+		end
+		if padding == 1 then
+			local a, b, c = str:byte(n-3,n-1)
+			local v = decoder[a]*0x40000 + decoder[b]*0x1000 + decoder[c]*0x40
+			t[k] = string.char(bit32.extract(v,16,8),bit32.extract(v,8,8))
+		elseif padding == 2 then
+			local a, b = str:byte(n-3,n-2)
+			local v = decoder[a]*0x40000 + decoder[b]*0x1000
+			t[k] = string.char(bit32.extract(v,16,8))
+		end
+		str = table.concat(t)
+	end
+	
+	local Position = 1
+	local function Parse(fmt)
+		local Values = {string.unpack(fmt,str,Position)}
+		Position = table.remove(Values)
+		return table.unpack(Values)
+	end
+	
+	local Settings = Parse('B')
+	local Flags = Parse('B')
+	Flags = {
+		--[[ValueIndexByteLength]] bit32.extract(Flags,6,2)+1,
+		--[[InstanceIndexByteLength]] bit32.extract(Flags,4,2)+1,
+		--[[ConnectionsIndexByteLength]] bit32.extract(Flags,2,2)+1,
+		--[[MaxPropertiesLengthByteLength]] bit32.extract(Flags,0,2)+1,
+		--[[Use Double instead of Float]] bit32.band(Settings,0b1) > 0
+	}
+	
+	local ValueFMT = ('I'..Flags[1])
+	local InstanceFMT = ('I'..Flags[2])
+	local ConnectionFMT = ('I'..Flags[3])
+	local PropertyLengthFMT = ('I'..Flags[4])
+	
+	local ValuesLength = Parse(ValueFMT)
+	local Values = table.create(ValuesLength)
+	local CFrameIndexes = {}
+	
+	local ValueDecoders = {
+		--!!Start
+		[1] = function(Modifier)
+			return Parse('s'..Modifier)
+		end,
+		--!!Split
+		[2] = function(Modifier)
+			return Modifier ~= 0
+		end,
+		--!!Split
+		[3] = function()
+			return Parse('d')
+		end,
+		--!!Split
+		[4] = function(_,Index)
+			table.insert(CFrameIndexes,{Index,Parse(('I'..Flags[1]):rep(3))})
+		end,
+		--!!Split
+		[5] = {CFrame.new,Flags[5] and 'dddddddddddd' or 'ffffffffffff'},
+		--!!Split
+		[6] = {Color3.fromRGB,'BBB'},
+		--!!Split
+		[7] = {BrickColor.new,'I2'},
+		--!!Split
+		[8] = function(Modifier)
+			local len = Parse('I'..Modifier)
+			local kpts = table.create(len)
+			for i = 1,len do
+				kpts[i] = ColorSequenceKeypoint.new(Parse('f'),Color3.fromRGB(Parse('BBB')))
+			end
+			return ColorSequence.new(kpts)
+		end,
+		--!!Split
+		[9] = function(Modifier)
+			local len = Parse('I'..Modifier)
+			local kpts = table.create(len)
+			for i = 1,len do
+				kpts[i] = NumberSequenceKeypoint.new(Parse(Flags[5] and 'ddd' or 'fff'))
+			end
+			return NumberSequence.new(kpts)
+		end,
+		--!!Split
+		[10] = {Vector3.new,Flags[5] and 'ddd' or 'fff'},
+		--!!Split
+		[11] = {Vector2.new,Flags[5] and 'dd' or 'ff'},
+		--!!Split
+		[12] = {UDim2.new,Flags[5] and 'di2di2' or 'fi2fi2'},
+		--!!Split
+		[13] = {Rect.new,Flags[5] and 'dddd' or 'ffff'},
+		--!!Split
+		[14] = function()
+			local flags = Parse('B')
+			local ids = {"Top","Bottom","Left","Right","Front","Back"}
+			local t = {}
+			for i = 0,5 do
+				if bit32.extract(flags,i,1)==1 then
+					table.insert(t,Enum.NormalId[ids[i+1]])
+				end
+			end
+			return Axes.new(unpack(t))
+		end,
+		--!!Split
+		[15] = function()
+			local flags = Parse('B')
+			local ids = {"Top","Bottom","Left","Right","Front","Back"}
+			local t = {}
+			for i = 0,5 do
+				if bit32.extract(flags,i,1)==1 then
+					table.insert(t,Enum.NormalId[ids[i+1]])
+				end
+			end
+			return Faces.new(unpack(t))
+		end,
+		--!!Split
+		[16] = {PhysicalProperties.new,Flags[5] and 'ddddd' or 'fffff'},
+		--!!Split
+		[17] = {NumberRange.new,Flags[5] and 'dd' or 'ff'},
+		--!!Split
+		[18] = {UDim.new,Flags[5] and 'di2' or 'fi2'},
+		--!!Split
+		[19] = function()
+			return Ray.new(Vector3.new(Parse(Flags[5] and 'ddd' or 'fff')),Vector3.new(Parse(Flags[5] and 'ddd' or 'fff')))
+		end
+		--!!End
+	}
+	
+	for i = 1,ValuesLength do
+		local TypeAndModifier = Parse('B')
+		local Type = bit32.band(TypeAndModifier,0b11111)
+		local Modifier = (TypeAndModifier - Type) / 0b100000
+		local Decoder = ValueDecoders[Type]
+		if type(Decoder)=='function' then
+			Values[i] = Decoder(Modifier,i)
+		else
+			Values[i] = Decoder[1](Parse(Decoder[2]))
+		end
+	end
+	
+	for i,t in pairs(CFrameIndexes) do
+		Values[t[1]] = CFrame.fromMatrix(Values[t[2]],Values[t[3]],Values[t[4]])
+	end
+	
+	local InstancesLength = Parse(InstanceFMT)
+	local Instances = {}
+	local NoParent = {}
+	
+	for i = 1,InstancesLength do
+		local ClassName = Values[Parse(ValueFMT)]
+		local obj
+		local MeshPartMesh,MeshPartScale
+		if ClassName == "UnionOperation" then
+			obj = DecodeUnion(Values,Flags,Parse)
+			obj.UsePartColor = true
+		elseif ClassName:find("Script") then
+			obj = Instance.new("Folder")
+			Script(obj,ClassName=='ModuleScript')
+		elseif ClassName == "MeshPart" then
+			obj = Instance.new("Part")
+			MeshPartMesh = Instance.new("SpecialMesh")
+			MeshPartMesh.MeshType = Enum.MeshType.FileMesh
+			MeshPartMesh.Parent = obj
+		else
+			obj = Instance.new(ClassName)
+		end
+		local Parent = Instances[Parse(InstanceFMT)]
+		local PropertiesLength = Parse(PropertyLengthFMT)
+		local AttributesLength = Parse(PropertyLengthFMT)
+		Instances[i] = obj
+		for i = 1,PropertiesLength do
+			local Prop,Value = Values[Parse(ValueFMT)],Values[Parse(ValueFMT)]
+			
+			-- ok this looks awful
+			if MeshPartMesh then
+				if Prop == "MeshId" then
+					MeshPartMesh.MeshId = Value
+					continue
+				elseif Prop == "TextureID" then
+					MeshPartMesh.TextureId = Value
+					continue
+				elseif Prop == "Size" then
+					if not MeshPartScale then
+						MeshPartScale = Value
+					else
+						MeshPartMesh.Scale = Value / MeshPartScale
+					end
+				elseif Prop == "MeshSize" then
+					if not MeshPartScale then
+						MeshPartScale = Value
+						MeshPartMesh.Scale = obj.Size / Value
+					else
+						MeshPartMesh.Scale = MeshPartScale / Value
+					end
+					continue
+				end
+			end
+			
+			obj[Prop] = Value
+		end
+		if MeshPartMesh then
+			if MeshPartMesh.MeshId=='' then
+				if MeshPartMesh.TextureId=='' then
+					MeshPartMesh.TextureId = 'rbxasset://textures/meshPartFallback.png'
+				end
+				MeshPartMesh.Scale = obj.Size
+			end
+		end
+		for i = 1,AttributesLength do
+			obj:SetAttribute(Values[Parse(ValueFMT)],Values[Parse(ValueFMT)])
+		end
+		if not Parent then
+			table.insert(NoParent,obj)
+		else
+			obj.Parent = Parent
+		end
+	end
+	
+	local ConnectionsLength = Parse(ConnectionFMT)
+	for i = 1,ConnectionsLength do
+		local a,b,c = Parse(InstanceFMT),Parse(ValueFMT),Parse(InstanceFMT)
+		Instances[a][Values[b]] = Instances[c]
+	end
+	
+	return NoParent
+end
+
+
+local Objects = Decode('AFD/ASEFTW9kZWwhCldvcmxkUGl2b3QEnwGgAaEBBKIBowGkAQSlAaYBpwEEqAGpAaoBIQRQYXJ0IQhBbmNob3JlZCIhDUJvdHRvbVN1cmZhY2UDAAAAAAAAAAAhBkNGcmFtZQQRAKsBrAEhC09yaWVudGF0aW9uCgAAAAAAALRCAAAAACEIUG9zaXRpb24K3c4SQyhc'
+..'F0Gqf77FIQhSb3RhdGlvbiEEU2l6ZQq4HgU/mZk5QQAAAD8hClRvcFN1cmZhY2UEFwCrAawBCp0bF0OicJFBqn++xQq4HgU/sB4FPxSuJ0AhCkJyaWNrQ29sb3IHXAEEIACrAawBIQVDb2xvcgbt6uohCE1hdGVyaWFsAwAAAAAAAHJACl2MF0PLzI5Bqn++xQr61qM+'
+..'KVwPPuv/vz8hBlNjcmlwdCEMU3VyZmFjZUxpZ2h0IQROYW1lIQhGdWxsR2xvdyEHU2hhZG93cyEFQW5nbGUDAAAAAACARkAhBEZhY2UDAAAAAAAAEEAhBVJhbmdlAwAAAAAAADhAIQlTb2Z0R2xvd0IhCkJyaWdodG5lc3MDAAAAAAAAwD8DAAAAAACAZkADAAAAAAAA'
+..'M0AhCVNvZnRHbG93VAMAAAAAAADwPwfHAAQ3AKsBrAEGY19iCl2MF0O2Ho9Bqn++xQqeR+E+zMzMPRRczz8EPQCtAa4BCgAANEIAALRCAAAAACELUGl2b3RPZmZzZXQErwGwAbEBCj1ZFEMLM4VBqn++xQoAALRCAAA0QgAAtMIKuB4FP1yPkkAAAAA/BLIBoAGhAQRC'
+..'ALMBpAEKmOuIQyhcF0H3nLjFBEQAswGkAQqY64hDonCRQZF6uMUERgCzAaQBCpjriEPLzI5BC3e4xQRIALMBpAEKmOuIQ7Yej0ELd7jFBEsApgG0AQoAADRCAAAAAAAAAAAKmOuIQwszhUGkkLjFBLUBoAGhAQROALMBpAEKy16qQyhcF0H3nLjFBFAAswGkAQrLXqpD'
+..'onCRQZF6uMUEUgCzAaQBCsteqkPLzI5BC3e4xQRUALMBpAEKy16qQ7Yej0ELd7jFBFYApgG0AQrLXqpDCzOFQaSQuMUEtgGgAaEBBFkAswGkAQrVdZtDKFwXQfecuMUEWwCzAaQBCtV1m0OicJFBkXq4xQRdALMBpAEK1XWbQ8vMjkELd7jFBF8AswGkAQrVdZtDth6P'
+..'QQt3uMUEYQCmAbQBCtV1m0MLM4VBpJC4xQS3AbgBoQEEZQC5AboBCgAAAAAAADRDAAAAAAo+fKJDKFwXQVQVuMUKAAA0wwAAAAAAADRDBGgAuQG6AQo+fKJDonCRQbo3uMUEagC5AboBCj58okPLzI5BQDu4xQRsALkBugEKPnyiQ7Yej0FAO7jFBG8AuwG8AQoAADRC'
+..'AAA0QwAAAAAKPnyiQwszhUGnIbjFCgAAB0MAAAAAAAA0QwS9AbgBoQEEcwC5AboBCuKskUMoXBdBVBW4xQR1ALkBugEK4qyRQ6JwkUG6N7jFBHcAuQG6AQrirJFDy8yOQUA7uMUEeQC5AboBCuKskUO2Ho9BQDu4xQR7ALsBvAEK4qyRQwszhUGnIbjFBL4BowGkAQS/'
+..'AcABwQEEfwDCAcMBCroJI0MoXBdBq3++xQoAADRDAAAAAAAANEMEgwCjAaQBCgAAAAAAALTCAAAAAAoQwh5DonCRQat/vsUEhQDEAaQBCmRRHkPLzI5BrH++xQSHAMQBpAEKZFEeQ7Yej0Gsf77FBIkAwgHDAQq6CSNDonCRQRGivsUEiwDFAaQBCrEJI0PLzI5Bl6W+'
+..'xQSNAMUBpAEKsQkjQ7Yej0GXpb7FBJAAxgHHAQoAAAAAAAA0QwAANMIKDH8hQ8kihUGrf77FCgAANEMAAAAAAAAHQwq4HgU/hOuRQAAAAD8ElADIAckBCroJI0MLM4VB/ou+xQTKAcsBwQEElwDMAc0BCqErI0MoXBdBVPi+xQSZAM4BzQEKoSsjQ6JwkUEX1r7FBJsA'
+..'zgHNAQqBKyNDy8yOQZHSvsUEnQDOAc0BCoErI0O2Ho9BkdK+xQSgAM8BpwEKAAAAAAAAtMIAADTCCqErI0PJIoVB/uu+xQoAADRCAAC0wgAAAAAE0AGjAaQBBNEBpgGnAQTSAaAB0wEEpgCzAdQBCsTwEkMoXBdBSJW4xQTVAbMB1gEEqgDXAdgBCgAAAAAAAAAAAAA0'
+..'wgpyexRDySKFQUiVuMUErACmAacBCsTwEkMLM4VB9Yi4xQSuANkBpAEKbjgXQ6JwkUFIlbjFBLAA2gGkAQoaqRdDy8yOQUeVuMUEsgDaAaQBChqpF0O2Ho9BR5W4xQS0ALMB1AEKxPASQ6JwkUHicrjFBLYA2wGkAQrN8BJDy8yOQVxvuMUEuADbAaQBCs3wEkO2Ho9B'
+..'XG+4xQTcAakBoQEEuwCrAawBCt3OEkMoXBdBnxy4xQTdAasB3gEEvwDfAckBCgAAAAAAALRCAAA0wgrdzhJDySKFQfUouMUKAAA0wgAAtEIAAAAABMIArQGuAQo9WRRDCzOFQZ8cuMUExADgAawBCt3OEkOicJFB3D64xQTGAOABrAEK/c4SQ8vMjkFiQrjFBMgA4AGs'
+..'AQr9zhJDth6PQWJCuMUEygCrAawBCp0bF0OicJFBnxy4xQTMAKsBrAEKXYwXQ8vMjkGfHLjFBM4AqwGsAQpdjBdDth6PQZ8cuMUE4QGjAaQBBOIBwAHBAQTSAMIBwwEKugkjQyhcF0GgHLjFBOMBwgHkAQTVAMYBxwEKDH8hQ8kihUGgHLjFBNcAyAHJAQq6CSNDCzOF'
+..'QfMouMUE2QCjAaQBChDCHkOicJFBoBy4xQTbAMQBpAEKZFEeQ8vMjkGhHLjFBN0AxAGkAQpkUR5Dth6PQaEcuMUE3wDCAcMBCroJI0OicJFBBj+4xQThAMUBpAEKsQkjQ8vMjkGMQrjFBOMAxQGkAQqxCSNDth6PQYxCuMUE5QHLAcEBBOYAzAHNAQqhKyNDKFwXQUmV'
+..'uMUE5gHMAecBBOkAzwGnAQqhKyNDySKFQfOIuMUE6wDoAekBCkGhIUMLM4VBSZW4xQoAALRCAAA0wgAAtEIE7gDOAc0BCqErI0OicJFBDHO4xQTwAM4BzQEKgSsjQ8vMjkGGb7jFBPIAzgHNAQqBKyNDth6PQYZvuMUE9ADMAc0BCuHeHkOicJFBSZW4xQT2AMwBzQEK'
+..'IW4eQ8vMjkFJlbjFBPgAzAHNAQohbh5Dth6PQUmVuMUE6gGjAaQBBOsBpgGnAQTsAaABqgEE/QCzAdQBCsTwEkMoXBdBPq66xQTtAbMB1gEEAAHXAdgBCnJ7FEPJIoVBPq66xQQCAaYBpwEKxPASQwszhUHrobrFBAQB2QGkAQpuOBdDonCRQT6uusUEBgHaAaQBChqp'
+..'F0PLzI5BPa66xQQIAdoBpAEKGqkXQ7Yej0E9rrrFBAoBswHUAQrE8BJDonCRQdiLusUEDAHbAaQBCs3wEkPLzI5BUoi6xQQOAdsBpAEKzfASQ7Yej0FSiLrFBO4BqQGqAQQRAasBrAEK3c4SQyhcF0GVNbrFBO8BqwHeAQQUAd8ByQEK3c4SQ8kihUHrQbrFBBYBrQGu'
+..'AQo9WRRDCzOFQZU1usUEGAHgAawBCt3OEkOicJFB0le6xQQaAeABrAEK/c4SQ8vMjkFYW7rFBBwB4AGsAQr9zhJDth6PQVhbusUEHgGrAawBCp0bF0OicJFBlTW6xQQgAasBrAEKXYwXQ8vMjkGVNbrFBCIBqwGsAQpdjBdDth6PQZU1usUE8AGjAaQBBPEBwAHBAQQm'
+..'AcIBwwEKugkjQyhcF0GWNbrFBPIBwgHkAQQpAcYBxwEKDH8hQ8kihUGWNbrFBCsByAHJAQq6CSNDCzOFQelBusUELQGjAaQBChDCHkOicJFBljW6xQQvAcQBpAEKZFEeQ8vMjkGXNbrFBDEBxAGkAQpkUR5Dth6PQZc1usUEMwHCAcMBCroJI0OicJFB/Fe6xQQ1AcUB'
+..'pAEKsQkjQ8vMjkGCW7rFBDcBxQGkAQqxCSNDth6PQYJbusUE8wHLAcEBBDoBzAHNAQqhKyNDKFwXQT+uusUE9AHMAecBBD0BzwGnAQqhKyNDySKFQemhusUEPwHoAekBCkGhIUMLM4VBP666xQRBAc4BzQEKoSsjQ6JwkUECjLrFBEMBzgHNAQqBKyNDy8yOQXyIusUE'
+..'RQHOAc0BCoErI0O2Ho9BfIi6xQRHAcwBzQEK4d4eQ6JwkUE/rrrFBEkBzAHNAQohbh5Dy8yOQT+uusUESwHMAc0BCiFuHkO2Ho9BP666xQT1AaMBpAEE9gGmAacBBPcBoAGqAQRQAbMB1AEKxPASQyhcF0EL37zFBPgBswHWAQRTAdcB2AEKcnsUQ8kihUEL37zFBFUB'
+..'pgGnAQrE8BJDCzOFQbjSvMUEVwHZAaQBCm44F0OicJFBC9+8xQRZAdoBpAEKGqkXQ8vMjkEK37zFBFsB2gGkAQoaqRdDth6PQQrfvMUEXQGzAdQBCsTwEkOicJFBpby8xQRfAdsBpAEKzfASQ8vMjkEfubzFBGEB2wGkAQrN8BJDth6PQR+5vMUE+QGpAaoBBGQBqwGs'
+..'AQrdzhJDKFwXQWJmvMUE+gGrAd4BBGcB3wHJAQrdzhJDySKFQbhyvMUEaQGtAa4BCj1ZFEMLM4VBYma8xQRrAeABrAEK3c4SQ6JwkUGfiLzFBG0B4AGsAQr9zhJDy8yOQSWMvMUEbwHgAawBCv3OEkO2Ho9BJYy8xQRxAasBrAEKnRsXQ6JwkUFiZrzFBHMBqwGsAQpd'
+..'jBdDy8yOQWJmvMUEdQGrAawBCl2MF0O2Ho9BYma8xQT7AaMBpAEE/AHAAcEBBHkBwgHDAQq6CSNDKFwXQWNmvMUE/QHCAeQBBHwBxgHHAQoMfyFDySKFQWNmvMUEfgHIAckBCroJI0MLM4VBtnK8xQSAAaMBpAEKEMIeQ6JwkUFjZrzFBIIBxAGkAQpkUR5Dy8yOQWRm'
+..'vMUEhAHEAaQBCmRRHkO2Ho9BZGa8xQSGAcIBwwEKugkjQ6JwkUHJiLzFBIgBxQGkAQqxCSNDy8yOQU+MvMUEigHFAaQBCrEJI0O2Ho9BT4y8xQT+AcsBwQEEjQHMAc0BCqErI0MoXBdBDN+8xQT/AcwB5wEEkAHPAacBCqErI0PJIoVBttK8xQSSAegB6QEKQaEhQwsz'
+..'hUEM37zFBJQBzgHNAQqhKyNDonCRQc+8vMUElgHOAc0BCoErI0PLzI5BSbm8xQSYAc4BzQEKgSsjQ7Yej0FJubzFBJoBzAHNAQrh3h5DonCRQQzfvMUEnAHMAc0BCiFuHkPLzI5BDN+8xQSeAcwBzQEKIW4eQ7Yej0EM37zFCjrGc0MJ2TBB2Ia7xQoAAIA/md5xL/IE'
+..'NaMKmd5xrwAAgD8AAAAACj/9GkMJ2TBB/7u+xQoAAECUAABAJAAAgD8KmN5xrwAAgD8AAECkCgyKFUMo3TBB9ru+xQoAAIA/mN5xLwAAgKMKDQcrr/IENT/0BDU/Cj0lFEMASEZB/JS+xQryBDWjDgcrkwAAgL8Kmd5xrwAAgD8FAACACgAAAAAAAICjAACAvwqc3nGv'
+..'AACAPwAAgKMKAACAowAAgKMAAIC/CvQENT/yBDU/AACAowoAAAAAAAAAugAAALoKAACAPwz7SiOeoIakCvIENSPzBDU/8wQ1Pwq4QIpDAEhGQUSSuMUKAACAP5jecS8AAAAACg4HK6/yBDU/9AQ1Pwrrs6tDAEhGQUSSuMUK9cqcQwBIRkFEkrjFCh4noUMASEZBByC4'
+..'xQoAAIC/md5xr/IENSMKAACAv5reca8AAAAACpreca8AAIA/AABAJAoAAIC/mt5xrwAAgCMKDgcrr/IENT/0BDW/CsJXkEMASEZBByC4xQpycCBDCdkwQf+7vsUKf18gQwBIRkFeir7FCgAAgL+X3nGv8gQ1IwqX3nGvAACAPwAAwKQKAACAv5jeca8AAAAACpjeca8A'
+..'AIA/maVbpAoAAAAAAABAJAAAgD8KAACAv5jeca/yZjUUCvIENb/0BDW/VVAbJAr0BDW/8gQ1P1NQG6QKAACAv5jeca8AAIAjCg8HK6/yBDU/9AQ1vwpB1SFDAEhGQQLjvsUK8gQ1IwAAwCQAAIA/CpjecZQAAKAkAACAPwqU3nGvAACAPwAAoKQKAACAP5TecS8AAMAJ'
+..'CgwHKy/0BDW/8gQ1Pwo//RpDCdkwQfRYuMUKDIoVQyjdMEHrWLjFCv+aFUMASEZBlYq4xQqZ3nGvAACAP/IENQcKmN5xrwAAgD9nWiSkClYKFENhMIRBRZS4xQqY3nGvAACAPwAAAAAK8gQ1P/QENb8ybugjCvQENT/yBDU/Mm7oowoAAEAUAABApAAAgL8KAAAAAAAA'
+..'QKQAAIC/CgAAgD+Y3nEv8mY1lAo9JRRDAEhGQfExuMUKPe8SQ2EwhEFsJbjFCpneca8AAIA/AACAowoSBysv9AQ1v/IENb8KAACAv5zeca8AAAAACnJwIEMJ2TBB9Fi4xQp/XyBDAEhGQVMnuMUKKPAhQ2EwhEGjHbjFCpjeca8AAIA/AADApApB1SFDAEhGQfd/uMUK'
+..'QQsjQ2EwhEF8jLjFCpfeca8AAIA/AACgpAoAAIAjAACgJAAAgD8K9AQ1v/IENT9sh0+kCj/9GkMJ2TBB6nG6xQoMihVDKN0wQeFxusUK/5oVQwBIRkGLo7rFClYKFENhMIRBO626xQo9JRRDAEhGQedKusUKPe8SQ2EwhEFiPrrFCnJwIEMJ2TBB6nG6xQp/XyBDAEhG'
+..'QUlAusUKKPAhQ2EwhEGZNrrFCkHVIUMASEZB7Zi6xQpBCyNDYTCEQXKlusUKP/0aQwnZMEG3orzFCgyKFUMo3TBBrqK8xQr/mhVDAEhGQVjUvMUKVgoUQ2EwhEEI3rzFCj0lFEMASEZBtHu8xQo97xJDYTCEQS9vvMUKcnAgQwnZMEG3orzFCn9fIEMASEZBFnG8xQoo'
+..'8CFDYTCEQWZnvMUKQdUhQwBIRkG6ybzFCkELI0NhMIRBP9a8xUkBAQAAAAEAAgADAAEAAQABAAIABAABAAIAAQACAAUAAQADAAEAAgAGAAcABAAIAAgACQAKAAsADAANAA4ADwAQABEAEgAPABMAFAAVAAsABwAEAAgACAAJAAoACwAMABYADgAPABAAFwASAA8AEwAY'
+..'ABUACwAHAAQACwAIAAkACgALABkAGgAMABsAHAAdAB4AHwAOAA8AEAAgABIADwATACEAFQALACIABwAAACMABwAFACQAJQAmAAkAJwAoACkAKgArACwAIwAHAAUAJAAtAC4ALwAnADAAKQAqACsAMQAjAAcABQAkADIALgAvACcAMAApADMAKwAxAAcABAAKAAgACQAK'
+..'AAsAGQA0AAwANQAcADYADgAPABAANwASAA8AEwA4ABUACwAHAAQACQAIAAkACgALAAwAOQAOADoAOwA8ABAAPQASAD4AEwA/ABUACwABAAMAAQACAEAABwAOAAYACAAJAAoACwAMAEEAEABCABMAFAAVAAsABwAOAAYACAAJAAoACwAMAEMAEABEABMAGAAVAAsABwAO'
+..'AAkACAAJAAoACwAZABoADABFABwAHQAeAB8AEABGABMAIQAVAAsAIgARAAAAIwARAAUAJAAlACYACQAnACgAKQAqACsALAAjABEABQAkAC0ALgAvACcAMAApACoAKwAxACMAEQAFACQAMgAuAC8AJwAwACkAMwArADEABwAOAAgACAAJAAoACwAZADQADABHABwANgAQ'
+..'AEgAEwA4ABUACwAHAA4ACQAIAAkACgALAAwASQAOAEoAOwA8ABAASwASAEoAEwA/ABUACwABAAMAAQACAEwABwAYAAYACAAJAAoACwAMAE0AEABOABMAFAAVAAsABwAYAAYACAAJAAoACwAMAE8AEABQABMAGAAVAAsABwAYAAkACAAJAAoACwAZABoADABRABwAHQAe'
+..'AB8AEABSABMAIQAVAAsAIgAbAAAAIwAbAAUAJAAlACYACQAnACgAKQAqACsALAAjABsABQAkAC0ALgAvACcAMAApACoAKwAxACMAGwAFACQAMgAuAC8AJwAwACkAMwArADEABwAYAAgACAAJAAoACwAZADQADABTABwANgAQAFQAEwA4ABUACwAHABgACQAIAAkACgAL'
+..'AAwAVQAOAEoAOwA8ABAAVgASAEoAEwA/ABUACwABAAMAAQACAFcABwAiAAYACAAJAAoACwAMAFgAEABZABMAFAAVAAsABwAiAAYACAAJAAoACwAMAFoAEABbABMAGAAVAAsABwAiAAkACAAJAAoACwAZABoADABcABwAHQAeAB8AEABdABMAIQAVAAsAIgAlAAAAIwAl'
+..'AAUAJAAlACYACQAnACgAKQAqACsALAAjACUABQAkAC0ALgAvACcAMAApACoAKwAxACMAJQAFACQAMgAuAC8AJwAwACkAMwArADEABwAiAAgACAAJAAoACwAZADQADABeABwANgAQAF8AEwA4ABUACwAHACIACQAIAAkACgALAAwAYAAOAEoAOwA8ABAAYQASAEoAEwA/'
+..'ABUACwABAAMAAQACAGIABwAsAAgACAAJAAoACwAMAGMADgBkABAAZQASAGYAEwAUABUACwAHACwACAAIAAkACgALAAwAZwAOAGQAEABoABIAZgATABgAFQALAAcALAALAAgACQAKAAsAGQAaAAwAaQAcAB0AHgAfAA4AZAAQAGoAEgBmABMAIQAVAAsAIgAvAAAAIwAv'
+..'AAUAJAAlACYACQAnACgAKQAqACsALAAjAC8ABQAkAC0ALgAvACcAMAApACoAKwAxACMALwAFACQAMgAuAC8AJwAwACkAMwArADEABwAsAAoACAAJAAoACwAZADQADABrABwANgAOAGQAEABsABIAZgATADgAFQALAAcALAAJAAgACQAKAAsADABtAA4AbgA7ADwAEABv'
+..'ABIAcAATAD8AFQALAAEAAwABAAIAcQAHADYACAAIAAkACgALAAwAcgAOAGQAEABzABIAZgATABQAFQALAAcANgAIAAgACQAKAAsADAB0AA4AZAAQAHUAEgBmABMAGAAVAAsABwA2AAsACAAJAAoACwAZABoADAB2ABwAHQAeAB8ADgBkABAAdwASAGYAEwAhABUACwAi'
+..'ADkAAAAjADkABQAkACUAJgAJACcAKAApACoAKwAsACMAOQAFACQALQAuAC8AJwAwACkAKgArADEAIwA5AAUAJAAyAC4ALwAnADAAKQAzACsAMQAHADYACgAIAAkACgALABkANAAMAHgAHAA2AA4AZAAQAHkAEgBmABMAOAAVAAsABwA2AAkACAAJAAoACwAMAHoADgBu'
+..'ADsAPAAQAHsAEgBwABMAPwAVAAsAAQACAAEAAgB8AAEAQAABAAIAfQAHAEEACAAIAAkACgALAAwAfgAOAGQAEAB/ABIAgAATABQAFQALAAcAQQAIAAgACQAKAAsADACBAA4AggAQAIMAEgCCABMAGAAVAAsABwBBAAsACAAJAAoACwAZABoADACEABwAHQAeAB8ADgCC'
+..'ABAAhQASAIIAEwAhABUACwAjAEQABQAkADIALgAvACcAMAApADMAKwAxACIARAAAACMARAAFACQALQAuAC8AJwAwACkAKgArADEAIwBEAAUAJAAlACYACQAnACgAKQAqACsALAAHAEEACgAIAAkACgALABkANAAMAIYAHAA2AA4AggAQAIcAEgCCABMAOAAVAAsABwBB'
+..'AAgACAAJAAoACwAMAIgADgBkABAAiQASAIAAEwAYABUACwAHAEEACwAIAAkACgALABkAGgAMAIoAHAAdAB4AHwAOAGQAEACLABIAgAATACEAFQALACMASwAFACQAMgAuAC8AJwAwACkAMwArADEAIgBLAAAAIwBLAAUAJAAtAC4ALwAnADAAKQAqACsAMQAjAEsABQAk'
+..'ACUAJgAJACcAKAApACoAKwAsAAcAQQAKAAgACQAKAAsAGQA0AAwAjAAcADYADgBkABAAjQASAIAAEwA4ABUACwAHAEEACAAIAAkACgALAAwAjgAOAI8AEACQABIAkQATAJIAFQALAAcAQQAJAAgACQAKAAsADACTAA4AbgA7ADwAEACUABIAcAATAD8AFQALAAEAQAAB'
+..'AAIAlQAHAFMACAAIAAkACgALAAwAlgAOAIIAEACXABIAggATABQAFQALAAcAUwAGAAgACQAKAAsADACYABAAmQATABgAFQALAAcAUwAJAAgACQAKAAsAGQAaAAwAmgAcAB0AHgAfABAAmwATACEAFQALACMAVgAFACQAMgAuAC8AJwAwACkAMwArADEAIgBWAAAAIwBW'
+..'AAUAJAAtAC4ALwAnADAAKQAqACsAMQAjAFYABQAkACUAJgAJACcAKAApACoAKwAsAAcAUwAIAAgACQAKAAsAGQA0AAwAnAAcADYAEACdABMAOAAVAAsABwBTAAgACAAJAAoACwAMAJ4ADgCfABAAoAASAKEAEwCSABUACwABAAEAAQACAKIAAQBdAAEAAgCjAAEAXgAB'
+..'AAIApAAHAF8ABgAIAAkACgALAAwApQAQAKYAEwAUABUACwABAF8AAQACAKcABwBhAAgACAAJAAoACwAMAKgADgCpABAAqgASAKkAEwCSABUACwAHAGEACQAIAAkACgALAAwAqwAOAEoAOwA8ABAArAASAEoAEwA/ABUACwAHAF8ACAAIAAkACgALAAwArQAOAA8AEACu'
+..'ABIADwATABgAFQALAAcAXwALAAgACQAKAAsAGQAaAAwArwAcAB0AHgAfAA4ADwAQALAAEgAPABMAIQAVAAsAIwBlAAUAJAAyAC4ALwAnADAAKQAzACsAMQAiAGUAAAAjAGUABQAkAC0ALgAvACcAMAApACoAKwAxACMAZQAFACQAJQAmAAkAJwAoACkAKgArACwABwBf'
+..'AAoACAAJAAoACwAZADQADACxABwANgAOAA8AEACyABIADwATADgAFQALAAcAXwAGAAgACQAKAAsADACzABAAtAATABgAFQALAAcAXwAJAAgACQAKAAsAGQAaAAwAtQAcAB0AHgAfABAAtgATACEAFQALACMAbAAFACQAMgAuAC8AJwAwACkAMwArADEAIgBsAAAAIwBs'
+..'AAUAJAAtAC4ALwAnADAAKQAqACsAMQAjAGwABQAkACUAJgAJACcAKAApACoAKwAsAAcAXwAIAAgACQAKAAsAGQA0AAwAtwAcADYAEAC4ABMAOAAVAAsAAQBeAAEAAgC5AAcAcgAIAAgACQAKAAsADAC6AA4ADwAQALsAEgAPABMAFAAVAAsAAQByAAEAAgC8AAcAdAAI'
+..'AAgACQAKAAsADAC9AA4AvgAQAL8AEgDAABMAkgAVAAsABwB0AAkACAAJAAoACwAMAMEADgA6ADsAPAAQAMIAEgA+ABMAPwAVAAsABwByAAgACAAJAAoACwAMAMMADgBkABAAxAASAIAAEwAYABUACwAHAHIACwAIAAkACgALABkAGgAMAMUAHAAdAB4AHwAOAGQAEADG'
+..'ABIAgAATACEAFQALACMAeAAFACQAMgAuAC8AJwAwACkAMwArADEAIgB4AAAAIwB4AAUAJAAtAC4ALwAnADAAKQAqACsAMQAjAHgABQAkACUAJgAJACcAKAApACoAKwAsAAcAcgAKAAgACQAKAAsAGQA0AAwAxwAcADYADgBkABAAyAASAIAAEwA4ABUACwAHAHIACAAI'
+..'AAkACgALAAwAyQAOAA8AEADKABIADwATABgAFQALAAcAcgALAAgACQAKAAsAGQAaAAwAywAcAB0AHgAfAA4ADwAQAMwAEgAPABMAIQAVAAsAIgB/AAAAIwB/AAUAJAAlACYACQAnACgAKQAqACsALAAjAH8ABQAkAC0ALgAvACcAMAApACoAKwAxACMAfwAFACQAMgAu'
+..'AC8AJwAwACkAMwArADEABwByAAoACAAJAAoACwAZADQADADNABwANgAOAA8AEADOABIADwATADgAFQALAAEAXQABAAIAzwABAIUAAQACANAABwCGAAgACAAJAAoACwAMANEADgBkABAA0gASAIAAEwAUABUACwABAIYAAQACANMABwCIAAgACAAJAAoACwAMANQADgCP'
+..'ABAA1QASAJEAEwCSABUACwAHAIgACQAIAAkACgALAAwA1gAOAG4AOwA8ABAA1wASAHAAEwA/ABUACwAHAIYACAAIAAkACgALAAwA2AAOAIIAEADZABIAggATABgAFQALAAcAhgALAAgACQAKAAsAGQAaAAwA2gAcAB0AHgAfAA4AggAQANsAEgCCABMAIQAVAAsAIwCM'
+..'AAUAJAAyAC4ALwAnADAAKQAzACsAMQAiAIwAAAAjAIwABQAkAC0ALgAvACcAMAApACoAKwAxACMAjAAFACQAJQAmAAkAJwAoACkAKgArACwABwCGAAoACAAJAAoACwAZADQADADcABwANgAOAIIAEADdABIAggATADgAFQALAAcAhgAIAAgACQAKAAsADADeAA4AZAAQ'
+..'AN8AEgCAABMAGAAVAAsABwCGAAsACAAJAAoACwAZABoADADgABwAHQAeAB8ADgBkABAA4QASAIAAEwAhABUACwAjAJMABQAkADIALgAvACcAMAApADMAKwAxACIAkwAAACMAkwAFACQALQAuAC8AJwAwACkAKgArADEAIwCTAAUAJAAlACYACQAnACgAKQAqACsALAAH'
+..'AIYACgAIAAkACgALABkANAAMAOIAHAA2AA4AZAAQAOMAEgCAABMAOAAVAAsAAQCFAAEAAgDkAAcAmQAIAAgACQAKAAsADADlAA4AggAQAOYAEgCCABMAFAAVAAsAAQCZAAEAAgDnAAcAmwAIAAgACQAKAAsADADoAA4AnwAQAOkAEgChABMAkgAVAAsABwCbAAkACAAJ'
+..'AAoACwAMAOoADgChADsAPAAQAOsAEgDsABMAPwAVAAsABwCZAAYACAAJAAoACwAMAO0AEADuABMAGAAVAAsABwCZAAkACAAJAAoACwAZABoADADvABwAHQAeAB8AEADwABMAIQAVAAsAIwCfAAUAJAAyAC4ALwAnADAAKQAzACsAMQAiAJ8AAAAjAJ8ABQAkAC0ALgAv'
+..'ACcAMAApACoAKwAxACMAnwAFACQAJQAmAAkAJwAoACkAKgArACwABwCZAAgACAAJAAoACwAZADQADADxABwANgAQAPIAEwA4ABUACwAHAJkACAAIAAkACgALAAwA8wAOAIIAEAD0ABIAggATABgAFQALAAcAmQALAAgACQAKAAsAGQAaAAwA9QAcAB0AHgAfAA4AggAQ'
+..'APYAEgCCABMAIQAVAAsAIgCmAAAAIwCmAAUAJAAlACYACQAnACgAKQAqACsALAAjAKYABQAkAC0ALgAvACcAMAApACoAKwAxACMApgAFACQAMgAuAC8AJwAwACkAMwArADEABwCZAAoACAAJAAoACwAZADQADAD3ABwANgAOAIIAEAD4ABIAggATADgAFQALAAEAAQAB'
+..'AAIA+QABAKwAAQACAPoAAQCtAAEAAgD7AAcArgAGAAgACQAKAAsADAD8ABAA/QATABQAFQALAAEArgABAAIA/gAHALAACAAIAAkACgALAAwA/wAOAKkAEAAAARIAqQATAJIAFQALAAcAsAAJAAgACQAKAAsADAABAQ4ASgA7ADwAEAACARIASgATAD8AFQALAAcArgAI'
+..'AAgACQAKAAsADAADAQ4ADwAQAAQBEgAPABMAGAAVAAsABwCuAAsACAAJAAoACwAZABoADAAFARwAHQAeAB8ADgAPABAABgESAA8AEwAhABUACwAjALQABQAkADIALgAvACcAMAApADMAKwAxACIAtAAAACMAtAAFACQALQAuAC8AJwAwACkAKgArADEAIwC0AAUAJAAl'
+..'ACYACQAnACgAKQAqACsALAAHAK4ACgAIAAkACgALABkANAAMAAcBHAA2AA4ADwAQAAgBEgAPABMAOAAVAAsABwCuAAYACAAJAAoACwAMAAkBEAAKARMAGAAVAAsABwCuAAkACAAJAAoACwAZABoADAALARwAHQAeAB8AEAAMARMAIQAVAAsAIwC7AAUAJAAyAC4ALwAn'
+..'ADAAKQAzACsAMQAiALsAAAAjALsABQAkAC0ALgAvACcAMAApACoAKwAxACMAuwAFACQAJQAmAAkAJwAoACkAKgArACwABwCuAAgACAAJAAoACwAZADQADAANARwANgAQAA4BEwA4ABUACwABAK0AAQACAA8BBwDBAAgACAAJAAoACwAMABABDgAPABAAEQESAA8AEwAU'
+..'ABUACwABAMEAAQACABIBBwDDAAgACAAJAAoACwAMABMBDgC+ABAAFAESAMAAEwCSABUACwAHAMMACQAIAAkACgALAAwAFQEOADoAOwA8ABAAFgESAD4AEwA/ABUACwAHAMEACAAIAAkACgALAAwAFwEOAGQAEAAYARIAgAATABgAFQALAAcAwQALAAgACQAKAAsAGQAa'
+..'AAwAGQEcAB0AHgAfAA4AZAAQABoBEgCAABMAIQAVAAsAIwDHAAUAJAAyAC4ALwAnADAAKQAzACsAMQAiAMcAAAAjAMcABQAkAC0ALgAvACcAMAApACoAKwAxACMAxwAFACQAJQAmAAkAJwAoACkAKgArACwABwDBAAoACAAJAAoACwAZADQADAAbARwANgAOAGQAEAAc'
+..'ARIAgAATADgAFQALAAcAwQAIAAgACQAKAAsADAAdAQ4ADwAQAB4BEgAPABMAGAAVAAsABwDBAAsACAAJAAoACwAZABoADAAfARwAHQAeAB8ADgAPABAAIAESAA8AEwAhABUACwAiAM4AAAAjAM4ABQAkACUAJgAJACcAKAApACoAKwAsACMAzgAFACQALQAuAC8AJwAw'
+..'ACkAKgArADEAIwDOAAUAJAAyAC4ALwAnADAAKQAzACsAMQAHAMEACgAIAAkACgALABkANAAMACEBHAA2AA4ADwAQACIBEgAPABMAOAAVAAsAAQCsAAEAAgAjAQEA1AABAAIAJAEHANUACAAIAAkACgALAAwAJQEOAGQAEAAmARIAgAATABQAFQALAAEA1QABAAIAJwEH'
+..'ANcACAAIAAkACgALAAwAKAEOAI8AEAApARIAkQATAJIAFQALAAcA1wAJAAgACQAKAAsADAAqAQ4AbgA7ADwAEAArARIAcAATAD8AFQALAAcA1QAIAAgACQAKAAsADAAsAQ4AggAQAC0BEgCCABMAGAAVAAsABwDVAAsACAAJAAoACwAZABoADAAuARwAHQAeAB8ADgCC'
+..'ABAALwESAIIAEwAhABUACwAjANsABQAkADIALgAvACcAMAApADMAKwAxACIA2wAAACMA2wAFACQALQAuAC8AJwAwACkAKgArADEAIwDbAAUAJAAlACYACQAnACgAKQAqACsALAAHANUACgAIAAkACgALABkANAAMADABHAA2AA4AggAQADEBEgCCABMAOAAVAAsABwDV'
+..'AAgACAAJAAoACwAMADIBDgBkABAAMwESAIAAEwAYABUACwAHANUACwAIAAkACgALABkAGgAMADQBHAAdAB4AHwAOAGQAEAA1ARIAgAATACEAFQALACMA4gAFACQAMgAuAC8AJwAwACkAMwArADEAIgDiAAAAIwDiAAUAJAAtAC4ALwAnADAAKQAqACsAMQAjAOIABQAk'
+..'ACUAJgAJACcAKAApACoAKwAsAAcA1QAKAAgACQAKAAsAGQA0AAwANgEcADYADgBkABAANwESAIAAEwA4ABUACwABANQAAQACADgBBwDoAAgACAAJAAoACwAMADkBDgCCABAAOgESAIIAEwAUABUACwABAOgAAQACADsBBwDqAAgACAAJAAoACwAMADwBDgCfABAAPQES'
+..'AKEAEwCSABUACwAHAOoACQAIAAkACgALAAwAPgEOAKEAOwA8ABAAPwESAOwAEwA/ABUACwAHAOgABgAIAAkACgALAAwAQAEQAEEBEwAYABUACwAHAOgACQAIAAkACgALABkAGgAMAEIBHAAdAB4AHwAQAEMBEwAhABUACwAjAO4ABQAkADIALgAvACcAMAApADMAKwAx'
+..'ACIA7gAAACMA7gAFACQALQAuAC8AJwAwACkAKgArADEAIwDuAAUAJAAlACYACQAnACgAKQAqACsALAAHAOgACAAIAAkACgALABkANAAMAEQBHAA2ABAARQETADgAFQALAAcA6AAIAAgACQAKAAsADABGAQ4AggAQAEcBEgCCABMAGAAVAAsABwDoAAsACAAJAAoACwAZ'
+..'ABoADABIARwAHQAeAB8ADgCCABAASQESAIIAEwAhABUACwAiAPUAAAAjAPUABQAkACUAJgAJACcAKAApACoAKwAsACMA9QAFACQALQAuAC8AJwAwACkAKgArADEAIwD1AAUAJAAyAC4ALwAnADAAKQAzACsAMQAHAOgACgAIAAkACgALABkANAAMAEoBHAA2AA4AggAQ'
+..'AEsBEgCCABMAOAAVAAsAAQABAAEAAgBMAQEA+wABAAIATQEBAPwAAQACAE4BBwD9AAYACAAJAAoACwAMAE8BEABQARMAFAAVAAsAAQD9AAEAAgBRAQcA/wAIAAgACQAKAAsADABSAQ4AqQAQAFMBEgCpABMAkgAVAAsABwD/AAkACAAJAAoACwAMAFQBDgBKADsAPAAQ'
+..'AFUBEgBKABMAPwAVAAsABwD9AAgACAAJAAoACwAMAFYBDgAPABAAVwESAA8AEwAYABUACwAHAP0ACwAIAAkACgALABkAGgAMAFgBHAAdAB4AHwAOAA8AEABZARIADwATACEAFQALACMAAwEFACQAMgAuAC8AJwAwACkAMwArADEAIgADAQAAIwADAQUAJAAtAC4ALwAn'
+..'ADAAKQAqACsAMQAjAAMBBQAkACUAJgAJACcAKAApACoAKwAsAAcA/QAKAAgACQAKAAsAGQA0AAwAWgEcADYADgAPABAAWwESAA8AEwA4ABUACwAHAP0ABgAIAAkACgALAAwAXAEQAF0BEwAYABUACwAHAP0ACQAIAAkACgALABkAGgAMAF4BHAAdAB4AHwAQAF8BEwAh'
+..'ABUACwAjAAoBBQAkADIALgAvACcAMAApADMAKwAxACIACgEAACMACgEFACQALQAuAC8AJwAwACkAKgArADEAIwAKAQUAJAAlACYACQAnACgAKQAqACsALAAHAP0ACAAIAAkACgALABkANAAMAGABHAA2ABAAYQETADgAFQALAAEA/AABAAIAYgEHABABCAAIAAkACgAL'
+..'AAwAYwEOAA8AEABkARIADwATABQAFQALAAEAEAEBAAIAZQEHABIBCAAIAAkACgALAAwAZgEOAL4AEABnARIAwAATAJIAFQALAAcAEgEJAAgACQAKAAsADABoAQ4AOgA7ADwAEABpARIAPgATAD8AFQALAAcAEAEIAAgACQAKAAsADABqAQ4AZAAQAGsBEgCAABMAGAAV'
+..'AAsABwAQAQsACAAJAAoACwAZABoADABsARwAHQAeAB8ADgBkABAAbQESAIAAEwAhABUACwAjABYBBQAkADIALgAvACcAMAApADMAKwAxACIAFgEAACMAFgEFACQALQAuAC8AJwAwACkAKgArADEAIwAWAQUAJAAlACYACQAnACgAKQAqACsALAAHABABCgAIAAkACgAL'
+..'ABkANAAMAG4BHAA2AA4AZAAQAG8BEgCAABMAOAAVAAsABwAQAQgACAAJAAoACwAMAHABDgAPABAAcQESAA8AEwAYABUACwAHABABCwAIAAkACgALABkAGgAMAHIBHAAdAB4AHwAOAA8AEABzARIADwATACEAFQALACIAHQEAACMAHQEFACQAJQAmAAkAJwAoACkAKgAr'
+..'ACwAIwAdAQUAJAAtAC4ALwAnADAAKQAqACsAMQAjAB0BBQAkADIALgAvACcAMAApADMAKwAxAAcAEAEKAAgACQAKAAsAGQA0AAwAdAEcADYADgAPABAAdQESAA8AEwA4ABUACwABAPsAAQACAHYBAQAjAQEAAgB3AQcAJAEIAAgACQAKAAsADAB4AQ4AZAAQAHkBEgCA'
+..'ABMAFAAVAAsAAQAkAQEAAgB6AQcAJgEIAAgACQAKAAsADAB7AQ4AjwAQAHwBEgCRABMAkgAVAAsABwAmAQkACAAJAAoACwAMAH0BDgBuADsAPAAQAH4BEgBwABMAPwAVAAsABwAkAQgACAAJAAoACwAMAH8BDgCCABAAgAESAIIAEwAYABUACwAHACQBCwAIAAkACgAL'
+..'ABkAGgAMAIEBHAAdAB4AHwAOAIIAEACCARIAggATACEAFQALACMAKgEFACQAMgAuAC8AJwAwACkAMwArADEAIgAqAQAAIwAqAQUAJAAtAC4ALwAnADAAKQAqACsAMQAjACoBBQAkACUAJgAJACcAKAApACoAKwAsAAcAJAEKAAgACQAKAAsAGQA0AAwAgwEcADYADgCC'
+..'ABAAhAESAIIAEwA4ABUACwAHACQBCAAIAAkACgALAAwAhQEOAGQAEACGARIAgAATABgAFQALAAcAJAELAAgACQAKAAsAGQAaAAwAhwEcAB0AHgAfAA4AZAAQAIgBEgCAABMAIQAVAAsAIwAxAQUAJAAyAC4ALwAnADAAKQAzACsAMQAiADEBAAAjADEBBQAkAC0ALgAv'
+..'ACcAMAApACoAKwAxACMAMQEFACQAJQAmAAkAJwAoACkAKgArACwABwAkAQoACAAJAAoACwAZADQADACJARwANgAOAGQAEACKARIAgAATADgAFQALAAEAIwEBAAIAiwEHADcBCAAIAAkACgALAAwAjAEOAIIAEACNARIAggATABQAFQALAAEANwEBAAIAjgEHADkBCAAI'
+..'AAkACgALAAwAjwEOAJ8AEACQARIAoQATAJIAFQALAAcAOQEJAAgACQAKAAsADACRAQ4AoQA7ADwAEACSARIA7AATAD8AFQALAAcANwEGAAgACQAKAAsADACTARAAlAETABgAFQALAAcANwEJAAgACQAKAAsAGQAaAAwAlQEcAB0AHgAfABAAlgETACEAFQALACMAPQEF'
+..'ACQAMgAuAC8AJwAwACkAMwArADEAIgA9AQAAIwA9AQUAJAAtAC4ALwAnADAAKQAqACsAMQAjAD0BBQAkACUAJgAJACcAKAApACoAKwAsAAcANwEIAAgACQAKAAsAGQA0AAwAlwEcADYAEACYARMAOAAVAAsABwA3AQgACAAJAAoACwAMAJkBDgCCABAAmgESAIIAEwAY'
+..'ABUACwAHADcBCwAIAAkACgALABkAGgAMAJsBHAAdAB4AHwAOAIIAEACcARIAggATACEAFQALACIARAEAACMARAEFACQAJQAmAAkAJwAoACkAKgArACwAIwBEAQUAJAAtAC4ALwAnADAAKQAqACsAMQAjAEQBBQAkADIALgAvACcAMAApADMAKwAxAAcANwEKAAgACQAK'
+..'AAsAGQA0AAwAnQEcADYADgCCABAAngESAIIAEwA4ABUACwAA')
+for _,obj in pairs(Objects) do
+	obj.Parent = script or workspace
+end
+
+RunScripts()
