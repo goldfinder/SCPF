@@ -16,7 +16,7 @@ script.Parent.L0A.ClickDetector.MouseClick:Connect(function(plr)
 		instance.SurfaceGui.TextLabel.Text="Added Access."
 		local inst = Instance.new("StringValue")
 		inst.Value = "Recruit"
-		inst.Name="Role"
+		inst.Name="Class"
 		inst.Parent = plr.Character
 		local inst = Instance.new("StringValue")
 		inst.Value = "Rapid Response Team"
@@ -37,7 +37,7 @@ script.Parent.L1A.ClickDetector.MouseClick:Connect(function(plr)
 		instance.SurfaceGui.TextLabel.Text="Added Access."
 		local inst = Instance.new("StringValue")
 		inst.Value = "Private"
-		inst.Name="Role"
+		inst.Name="Class"
 		inst.Parent = plr.Character
 		local inst = Instance.new("StringValue")
 		inst.Value = "Rapid Response Team"
@@ -58,7 +58,7 @@ script.Parent.L2A.ClickDetector.MouseClick:Connect(function(plr)
 		instance.SurfaceGui.TextLabel.Text="Added Access."
 		local inst = Instance.new("StringValue")
 		inst.Value = "Specialist"
-		inst.Name="Role"
+		inst.Name="Class"
 		inst.Parent = plr.Character
 		local inst = Instance.new("StringValue")
 		inst.Value = "Rapid Response Team"
@@ -79,7 +79,7 @@ script.Parent.L3A.ClickDetector.MouseClick:Connect(function(plr)
 		instance.SurfaceGui.TextLabel.Text="Added Access."
 		local inst = Instance.new("StringValue")
 		inst.Value = "Sergeant"
-		inst.Name="Role"
+		inst.Name="Class"
 		inst.Parent = plr.Character
 		local inst = Instance.new("StringValue")
 		inst.Value = "Rapid Response Team"
@@ -100,7 +100,7 @@ script.Parent.L4A.ClickDetector.MouseClick:Connect(function(plr)
 		instance.SurfaceGui.TextLabel.Text="Added Access."
 		local inst = Instance.new("StringValue")
 		inst.Value = "Lieutenant"
-		inst.Name="Role"
+		inst.Name="Class"
 		inst.Parent = plr.Character
 		local inst = Instance.new("StringValue")
 		inst.Value = "Rapid Response Team"
@@ -121,7 +121,7 @@ script.Parent.L5A.ClickDetector.MouseClick:Connect(function(plr)
 		instance.SurfaceGui.TextLabel.Text="Added Access."
 		local inst = Instance.new("StringValue")
 		inst.Value = "Vice Commander"
-		inst.Name="Role"
+		inst.Name="Class"
 		inst.Parent = plr.Character
 		local inst = Instance.new("StringValue")
 		inst.Value = "Rapid Response Team"
@@ -142,7 +142,7 @@ script.Parent.L6A.ClickDetector.MouseClick:Connect(function(plr)
 		instance.SurfaceGui.TextLabel.Text="Added Access."
 		local inst = Instance.new("StringValue")
 		inst.Value = "Commander"
-		inst.Name="Role"
+		inst.Name="Class"
 		inst.Parent = plr.Character
 		local inst = Instance.new("StringValue")
 		inst.Value = "Rapid Response Team"
